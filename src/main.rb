@@ -30,5 +30,3 @@ while enter_menu == 1
 end
 
 puts "Have a nice day!"
-
-
