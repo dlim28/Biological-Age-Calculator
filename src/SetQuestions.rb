@@ -1,3 +1,5 @@
+# This module allows you to answer the questions to determine the score
+# It will return array
 module SetQuestions
 
     def self.start_questions

@@ -1,3 +1,5 @@
+# This class creates a user profile "Object"
+# Used mainly to store the answers
 class Person
 
     attr_accessor :name, :age, :date_of_birth, :gender, 

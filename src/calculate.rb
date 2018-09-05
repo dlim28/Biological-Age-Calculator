@@ -1,4 +1,5 @@
 
+# This module will convert the answers that were stored in the user profile to points
 module Calculate 
      
     def self.set_score user_profile

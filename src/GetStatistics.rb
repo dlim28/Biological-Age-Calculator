@@ -1,4 +1,4 @@
-
+# This module will return statistics based on the options selected in the user profile
 module GetStatistics
 
     def self.get_smoker_statistics

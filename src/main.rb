@@ -36,27 +36,27 @@ def display_user_profile profile
     user_profile_row << ["Age.", profile.age]
     user_profile_row << :separator
     user_profile_row << ["Date of Birth", profile.date_of_birth]
-=begin
-    if profile.body_type != 0 && (profile.body_type == 4 || profile.body_type == 5)
-        user_profile_row << ["Fun Fact", GetStatistics::get_excercise_statistics()]
 
-    elsif profile.hours_of_sleep != 0 && (profile.hours_of_sleep != 3 || profile.hours_of_sleep != 4)
-        user_profile_row << ["Fun Fact", GetStatistics::get_sleep_statistic()]
+    # if profile.body_type != 0 && (profile.body_type == 4 || profile.body_type == 5)
+    #     user_profile_row << ["Fun Fact", GetStatistics::get_excercise_statistics()]
 
-    elseif profile.alcoholic != 0 && (profile.alcoholic != 1 || profile.alcoholic != 2)
-    user_profile_row << ["Fun Fact", GetStatistics::get_alcohol_statistics()]
+    # elsif profile.hours_of_sleep != 0 && (profile.hours_of_sleep != 3 || profile.hours_of_sleep != 4)
+    #     user_profile_row << ["Fun Fact", GetStatistics::get_sleep_statistic()]
 
-    elsif profile.is_smoker != 0 && profile.is_smoker == 1
-        user_profile_row << ["Fun Fact", GetStatistics::get_smoker_statistics()]
+    # elseif profile.alcoholic != 0 && (profile.alcoholic != 1 || profile.alcoholic != 2)
+    # user_profile_row << ["Fun Fact", GetStatistics::get_alcohol_statistics()]
 
-    elsif profile.consume_veggies != 0 && profile.consume_veggies == 2
+    # elsif profile.is_smoker != 0 && profile.is_smoker == 1
+    #     user_profile_row << ["Fun Fact", GetStatistics::get_smoker_statistics()]
+
+    # elsif profile.consume_veggies != 0 && profile.consume_veggies == 2
         
-    elsif profile.consume_fruit != 0 && profile.consume_fruit == 2
+    # elsif profile.consume_fruit != 0 && profile.consume_fruit == 2
         
-    elsif profile.happiness_index != 0 && (profile.happiness_index != 1 || profile.happiness_index != 2)
+    # elsif profile.happiness_index != 0 && (profile.happiness_index != 1 || profile.happiness_index != 2)
 
-    end
-=end
+    # end
+
     display_profile = Terminal::Table.new :title => "Your Profile", :rows => user_profile_row
 
     return display_profile
