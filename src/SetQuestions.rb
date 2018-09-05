@@ -9,7 +9,7 @@ module SetQuestions
         answers.push(age)
 
         puts "Are you male or female?(1 = M, 2 = F)"
-        gender = gets.strip
+        gender = gets.strip.to_1
         answers.push(gender)
 
         puts "How would you describe your body? (1 = Very skinny, 2 = Skinny, 3 = Average, 4 = Overweight, 5 = Obese)"
@@ -25,15 +25,15 @@ module SetQuestions
         answers.push(alcohol)
 
         puts "Do you smoke ciggies? (1 = Yes, 2 = No)"
-        smoke = gets.strip
+        smoke = gets.strip.to_1
         answers.push(smoke)
 
         puts "Do you have at least 2 veggies per day? (1 = Yes, 2 = No)"
-        veggies = gets.strip
+        veggies = gets.strip.to_1
         answers.push(veggies)
 
         puts "Do you have at least 5 fruit per day? (1 = Yes, 2 = No)"
-        fruit = gets.strip
+        fruit = gets.strip.to_1
         answers.push(fruit)
 
         puts "How happy are you?(1 = Not happy, 2 = Meh, 3 = Happy)"
