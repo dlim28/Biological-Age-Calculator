@@ -1,9 +1,9 @@
 # TERMINAL PROJECT - Biological Age Calculator
 ## Description
-This terminal application will show you your biological age after a series of responses. It will also show suggestions or recommendations to improve your biological age
+This terminal application will reveal to you, your biological age after a series of responses. It will also show suggestions or recommendations to improve your biological age
 
 ## Instructions
-You will be required to use numbers to answer the question unless otherwise specified
+You will be required to use numbers to answer the question in the input unless otherwise specified
 
 
 
@@ -29,9 +29,17 @@ The application was meant to have a main class originally to handle all the menu
 Another change was the addition of the **SetQuestions** module to seperate the answering of the questions from the calculation of the answers.   
 When attempting to put all the questions as well as doing the calculation for all the answers, the module was verbose and it was messy to read. A clean up was needed and which was why we had decided to seperate the two
 
-<Insert picture of code from calculate>
-<Insert picture of code from SetQuestions>
+Calculate  
+![alt text][image3]
 
+[image3]:
+https://raw.githubusercontent.com/dlim28/Biological-Age-Calculator/master/docs/Calculate%20Code.png "Calculate Code Snippit"
+
+SetQuestions  
+![alt text][image4]
+
+[image4]:
+https://raw.githubusercontent.com/dlim28/Biological-Age-Calculator/master/docs/SetQuestions%20Code.png "SetQuestions Code Snippit"
 
 ## Project Management & Timeline
 We used Trello to keep track of all tasks that is required to have a working terminal application
@@ -42,3 +50,24 @@ Trello Board (Biological Age Calculator) - [LINK](https://trello.com/b/9hFg7is3/
 
 [trello]: https://raw.githubusercontent.com/dlim28/Biological-Age-Calculator/master/docs/Terminal%20Project%20-%20Biological%20Age%20Calculator%20Trello.png "Trello Board - Biological Age Calculator"
 
+The trello board was seperated into the following:
+* Things To Do  
+* In Progress
+* Pending
+* Review
+* Completed
+* Cancelled/No longer required
+
+Each of these have their own functions
+ - Things to do holds all the tasks that are still needed to be completed and not assigned to anyone
+ - In Progress are tasks that have yet to be completed but have been assigned to someone
+ - Pending means that a task has been put on hold and up for further discussion
+ - Review means that the task has been completed and needs to be reviewed before putting into completed pile. If there are still glaring problems it goes back to In Progress
+ - Completed means that the task is completed and acceptable by all members
+ - Cancelled/No Longer required means that the task is no longer required or has been superceded by something else
+  
+The start date as well as the first day involved starting the classes and modules needed for the application to work.
+It also includes revision to the overall application if needed.
+Ideally the core part of the application should be finished and working at this point
+
+The second day is dedicated to finishing off and polishing the application. It is also dedicated to applying ruby gems to allow a more aesthetic sense so it is more palletable rather than just a terminal text block 
