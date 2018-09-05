@@ -1,7 +1,8 @@
 class Person
 
-    attr_reader :name, :age, :date_of_birth, :biological_age
-    attr_writer :is_smoker, :alcoholic, :body_type, :consume_veggies, :consume_fruit, :happiness_index, :biological_age, :hours_of_sleep
+    attr_accessor :name, :age, :date_of_birth, :gender, 
+                    :body_type, :hours_of_sleep, :alcoholic, :is_smoker,
+                    :consume_veggies, :consume_fruit, :happiness_index, :biological_age
 
     def initialize user_name, user_age, user_dob
         @name = user_name

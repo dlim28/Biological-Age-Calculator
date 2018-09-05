@@ -24,6 +24,7 @@ while enter_menu == 1
         puts "Name: #{user_profile.name}, Age: #{user_profile.age}, DOB: #{user_profile.date_of_birth}"
     when 2
         #Set questions
+        list_of_answers = SetQuestions::start_questions
     when 3
         #CalculateBiologicalAge
     when 4
