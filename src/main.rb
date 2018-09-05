@@ -3,13 +3,14 @@ require_relative 'SetQuestions.rb'
 require_relative 'Calculate.rb'
 require_relative 'GetStatistics.rb'
 require 'terminal-table'
+require 'rainbow'
 
 def display_start_menu
     start_menu_rows = []
-    start_menu_rows << ["1.", "Start"]
-    start_menu_rows << ["0.", "Exit"]
-    
-    start_menu_table = Terminal::Table.new :title => "Start Menu", :rows => start_menu_rows
+    start_menu_rows << [Rainbow("1.").hotpink.bright, Rainbow("Start").lightskyblue.bright]
+    start_menu_rows << [Rainbow("0.").hotpink.bright, Rainbow("Exit").lightskyblue.bright]
+
+    start_menu_table = Terminal::Table.new :title => Rainbow("Start Menu").hotpink.bright, :rows => start_menu_rows
     start_menu_table.style = {:width => 40, :padding_left => 3, :border_x => "=", :border_i => "x"}
 
     return start_menu_table
@@ -63,16 +64,16 @@ end
 
 def display_main_menu
     main_menu_rows = []
-    main_menu_rows << ["1.", "Create user profile"]
+    main_menu_rows << [Rainbow("1.").hotpink.bright, Rainbow("Create user profile").lightskyblue.bright]
     main_menu_rows << :separator
-    main_menu_rows << ["2.", "Answer survey questions"]
+    main_menu_rows << [Rainbow("2.").hotpink.bright, Rainbow("Answer survey questions").lightskyblue.bright]
     main_menu_rows << :separator
-    main_menu_rows << ["3.", "Calculate biological age"]
+    main_menu_rows << [Rainbow("3.").hotpink.bright, Rainbow("Calculate biological age").lightskyblue.bright]
     main_menu_rows << :separator
-    main_menu_rows << ["4.", "Show Profile"]
+    main_menu_rows << [Rainbow("4.").hotpink.bright, Rainbow("Show Profile").lightskyblue.bright]
     main_menu_rows << :separator
-    main_menu_rows << ["0.", "Exit"]
-    main_menu_table = Terminal::Table.new :title => "Main Menu", :rows => main_menu_rows
+    main_menu_rows << [Rainbow("0.").hotpink.bright, Rainbow("Exit").lightskyblue.bright]
+    main_menu_table = Terminal::Table.new :title => Rainbow("Main Menu").hotpink.bright, :rows => main_menu_rows
 
     return main_menu_table
 end
@@ -82,14 +83,14 @@ list_of_answers = nil
 
 puts display_start_menu
 
-print "What would you like to do?: \n"
+print Rainbow("What would you like to do?\n").blueviolet.bright
 enter_menu = gets.strip.to_i
 
 while enter_menu == 1
     
     puts "\n"
     puts display_main_menu
-    print "\nPick an option: "
+    print Rainbow("\nPick an option: ").blueviolet.bright
 
     get_index = gets.strip.to_i
 
@@ -98,31 +99,30 @@ while enter_menu == 1
         #SetUserProfile()
         if user_profile == nil
             user_profile = SetUserProfile::initial_questions
-            puts "Your user profile has been created. Thanks #{user_profile.name}\n"
+            puts Rainbow("Your user profile has been created. Thanks #{user_profile.name}\n").bright
         else
-            puts "You already have a profile #{user_profile.name}\n"
+            puts Rainbow("You already have a profile #{user_profile.name}\n").red.bright
         end
         
     when 2
         #Set questions
         if user_profile == nil 
-            puts "You do not have a profile. Make a profile first!\n"
+            puts Rainbow("You do not have a profile. Make a profile first!\n").red.bright
         else
             if list_of_answers != nil
-                puts "You already answered the questions!\nGo and calculate your biological age!\n"
+                puts Rainbow("You already answered the questions!\nGo and calculate your biological age!\n").blueviolet.bright
             else
                 list_of_answers = SetQuestions::start_questions
                 set_user_questions(user_profile, list_of_answers)
-                puts "Thank you for answering the questions!\nYou should calculate your biological age now!\n"
-            end
+                puts Rainbow("Thank you for answering the questions!\nYou should calculate your biological age now!\n").blueviolet.bright            end
         end
     when 3
         #Calculate the biological age
 
         if user_profile == nil
-            puts "You do not have a profile. Make a profile first!\n"
+            puts Rainbow("You do not have a profile. Make a profile first!\n").blueviolet.bright
         elsif list_of_answers == nil
-            puts "You haven't answered the questions yet!"
+            puts Rainbow("You haven't answered the questions yet!").red.bright
 
         else
             biological_age = Calculate::set_score(user_profile)
@@ -138,7 +138,7 @@ while enter_menu == 1
         
     when 4
         if user_profile == nil
-            puts "You do not have a profile. Make a profile first!\n"
+            puts Rainbow("You do not have a profile. Make a profile first!\n").red.bright
         else
 
             puts display_user_profile(user_profile)
@@ -152,4 +152,4 @@ while enter_menu == 1
 
 end
 
-puts "Have a nice day!"
+puts Rainbow("Have a nice day!").lemonchiffon.bright
