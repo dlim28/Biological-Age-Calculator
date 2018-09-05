@@ -5,7 +5,17 @@ This terminal application will reveal to you, your biological age after a series
 ## Instructions
 You will be required to use numbers to answer the question in the input unless otherwise specified
 
+![alt text][img]
 
+[img]:
+https://raw.githubusercontent.com/dlim28/Biological-Age-Calculator/master/docs/Input.png "input image"
+
+## Functionality
+You will first need to create a basic user profile before you can answer the questionaire or calculate your biological age.
+
+Once the user profile is created, you will then answer the questions which will determine what kind of score you will get that will determine your calculation
+
+Once that is completed you can then calculate your biological age
 
 #### GitHub Repository  
 Biological Age Calculator respository - [LINK](https://github.com/dlim28/Biological-Age-Calculator.git)
@@ -66,8 +76,17 @@ Each of these have their own functions
  - Completed means that the task is completed and acceptable by all members
  - Cancelled/No Longer required means that the task is no longer required or has been superceded by something else
   
-The start date as well as the first day involved starting the classes and modules needed for the application to work.
-It also includes revision to the overall application if needed.
+The start date was mainly about brainstorming ideas and doing research about what will be chosen.
+Zainab had a series of ideas relating to health, but the three that were most noticable were:
+
+1. The first idea was about tracking the time a patient had to wait for a doctor.
+2. Another idea was to have the app calculate the age of your heart
+3. Calculate your biological age (Your "real" age dependant on you lifestyle)  
+   
+We picked the biological age calculator as it was rather interesting.
+
+The first day involved starting the classes and modules needed for the application to work.
+It also includes revision to the overall application if needed as we can still make major changes if we need to
 Ideally the core part of the application should be finished and working at this point
 
-The second day is dedicated to finishing off and polishing the application. It is also dedicated to applying ruby gems to allow a more aesthetic sense so it is more palletable rather than just a terminal text block 
+The second day is dedicated to finishing off and polishing the application. It is also dedicated to applying ruby gems to allow a more aesthetic sense so it is more palletable rather than just terminal text
