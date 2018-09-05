@@ -1,5 +1,6 @@
 require_relative 'SetUserProfile.rb'
 require_relative 'SetQuestions.rb'
+require_relative 'Calculate.rb'
 
 puts "Main Menu \n------ Biological Age Calculator ------"
 puts "1. Start \n0.Exit"
@@ -9,18 +10,15 @@ enter_menu = gets.strip.to_i
 user_profile = nil
 
 def set_user_questions profile, answers
-        @name = user_name
         profile.age = answers[0]
-        @date_of_birth = user_dob
         profile.gender = answers[1]
         profile.body_type = answers[2]
-        @hours_of_sleep = answers[3]
-        @alcoholic = answers[4]
-        @is_smoker = 0 #Yes(10), No(0)
-        @consume_veggies = 0 #Yes(-10), No(5)
-        @consume_fruit = 0 #Yes(-10), No(5)
-        @happiness_index = 0 #Not happy(20), Meh(10), Happy(-10)
-        @biological_age = 0
+        profile.hours_of_sleep = answers[3]
+        profile.alcoholic = answers[4]
+        profile.is_smoker = answers[5]
+        profile.consume_veggies = answers[6]
+        profile.consume_fruit = answers[7]
+        profile.happiness_index = answers[8]
 end
 
 while enter_menu == 1
@@ -48,7 +46,15 @@ while enter_menu == 1
             set_user_questions(user_profile, list_of_answers)
         end
     when 3
-        #CalculateBiologicalAge
+        #Calculate the biological age
+        biological_age = Calculate::set_score(user_profile)
+        if biological_age <= 0
+            puts "Subtract #{biological_age} from your current age.
+            \nYour biological age is #{age + biological_age}!"
+        else
+            puts "Add #{biological_age} to your current age.
+            \nYour biological age is #{age + biological_age}"
+        end
     when 4
         if user_profile == nil
             puts "You do not have a profile. Make a profile first!"
@@ -57,7 +63,6 @@ while enter_menu == 1
         end
     when 0
         enter_menu = 0
-
     else
         puts "Try again!"
     end

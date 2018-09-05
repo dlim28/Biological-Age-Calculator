@@ -1,85 +1,94 @@
-#constant, variables
-#i want to represrnt the values
 
-module Calculate
+module Calculate 
      
-    point_score = 0
+    def self.set_score user_profile
 
-    if user_profile.gender == 1
-        point_score += 5
-    end
+        point_score = 0
 
-    if user_profile.body_type == 1
-        point_score += 5
+        # Gender
+        if user_profile.gender == 1
+            point_score += 5
+        end
 
-    elsif user_profile.body_type == 2
-        point_score -= 5
+        # Body Type
+        if user_profile.body_type == 1
+            point_score += 5
 
-    elsif user_profile.body_type == 3
-        point_score += 15
+        elsif user_profile.body_type == 2
+            point_score -= 5
 
-    elsif user_profile.body_type == 4
-        point_score += 30
-    end
+        elsif user_profile.body_type == 3
+            point_score += 15
 
-    if user_profile.sleeping == 1
-        point_score += 20
+        elsif user_profile.body_type == 4
+            point_score += 30
+        end
 
-    elsif user_profile.sleeping == 2
-        point_score += 5
+        #Sleeping
+        if user_profile.hours_of_sleep == 1
+            point_score += 20
 
-    elsif user_profile.sleeping == 3
+        elsif user_profile.hours_of_sleep == 2
+            point_score += 5
+
+        elsif user_profile.hours_of_sleep == 3
+            point_score -= 10
+
+        elsif user_profile.hours_of_sleep == 4
+            point_score += 5
+        end
+
+        # Alcohol
+        if user_profile.alcoholic == 1
+            point_score -= 5
+
+        elsif user_profile.alcoholic == 2
+            point_score += 2
+
+        elsif user_profile.alcoholic == 3
+            point_score += 15
+        end
+
+        # Smoking
+        if user_profile.is_smoker == 1
         point_score -= 10
 
-    elsif user_profile.sleeping == 4
-        point_score += 5
+        elsif user_profile.is_smoker == 2
+            point_score += 5
+
+        elsif user_profile.is_smoker == 3
+            point_score += 10
+        end
+
+        # Veggie servings
+        if user_profile.consume_veggies == 1
+            point_score -= 20
+
+        elsif user_profile.consume_veggies == 2
+            point_score += 15
+        end 
+
+        # Fruit serving
+        if user_profile.consume_fruit == 1
+            point_score -= 15
+        
+        elsif user_profile.consume_fruit == 2
+            point_score += 10
+        end 
+
+        # Happiness index
+        if user_profile.happiness_index == 1
+            point_score += 15
+
+        elsif user_profile.happiness_index == 2
+            point_score -= 5
+
+        elsif user_profile.happiness_index == 3
+            point_score -= 15
+        end 
+
+        return point_score 
     end
-
-    if user_profile.alcohol == 1
-        point_score -= 5
-
-    elsif user_profile.alcohol == 2
-        point_score += 2
-
-    elsif user_profile.alcohol == 3
-        point_score += 15
-    end
-
-    if user_profile.smoke == 1
-    point_score -= 10
-
-    elsif user_profile.smoke == 2
-        point_score += 5
-
-    elsif user_profile == 3
-        point_score += 10
-    end
-
-    if user_profile.veggies == 1
-        point_score -= 20
-
-    elsif user_profile.veggies == 2
-        point_score += 15
-    end 
-
-    if user_profile.fruit == 1
-        point_score -= 15
     
-    elsif user_profile.fruit == 2
-        point_score += 10
-    end 
-
-    if user_profile.happiness == 1
-        point_score += 15
-
-    elsif user_profile.happiness == 2
-        point_score -= 5
-
-    elsif user_profile.happiness == 3
-        point_score -= 15
-    end 
-
-return point_score 
-
 end 
 
