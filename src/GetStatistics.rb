@@ -29,6 +29,15 @@ module GetStatistics
                 At least a quarter of Australian children and adolescents are obese or overweight.'
     end
 
+    def self.get_sleep_statistic
+        return '
+        The report found that $270 million per year is being spent caring for sleep disorders. 
+        However they cost $540 million per year in health care costs for associated conditions and a 
+        further $4.3 billion per year through indirect costs. 
+        This includes $3.1 billion in lost productivity and $650 million in informal care and other indirect costs 
+        resulting from motor vehicle and workplace accidents.'
+    end
+
     def self.get_health_recommendation
         
         return 'Be healthy! It is good for you'
